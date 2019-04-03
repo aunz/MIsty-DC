@@ -4,7 +4,7 @@ const axios = require('axios')
 const app = express()
 const port = 3000
 
-const message = `Please end a GET request to /predict with the following query keys:
+const message = `Please send a GET request to /predict with the following query keys:
   x1 str,
   x2 str,
   x3 str,
