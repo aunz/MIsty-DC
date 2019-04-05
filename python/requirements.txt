@@ -1,0 +1,4 @@
+pandas==0.24.*
+scikit-learn==0.20.*
+xgboost==0.82
+flask==1.0.*
