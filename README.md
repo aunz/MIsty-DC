@@ -17,8 +17,13 @@ Predict the binary target *y* (0 or 1) given features *X*
 - The model is deployed using Flask
 - Nodejs is used in front of Flask to validate inputs
 
+How to run? Docker or manual installtion
 
-# Installation
+# Docker
+
+`docker run -d -p 3000:3000 aunz10/misty-dc`
+
+# Manual installation
 
 - Install [nodejs](https://nodejs.org/), v11.13.0
 - Install [python3](https://www.python.org/downloads/), minimum v3.6
@@ -26,7 +31,6 @@ Predict the binary target *y* (0 or 1) given features *X*
 - Install [xgboost](https://xgboost.readthedocs.io/en/latest/build.html), v0.82
 - Install [Flask](http://flask.pocoo.org/docs/1.0/installation/) v1.0 
 
-# How to run locally
 
 ### Express server
 under the main folder, run
@@ -43,7 +47,9 @@ under the main folder, run
 
 This will create a Flask server listening on port 5555
 
-Now issue a curl request
+# Give it a try
+
+Issue a get request
 
 `curl "localhost:3000/predict?x1=id82386&x2=8.1.0&x3=LGE_LM-V405&x4=US&x5=0&x6=1999&x7=19&x8=0&x9=2&x10=1&x11=0&x12=0.1320754717&x13=0&x14=53&x15=LGE&x16=0&x17=8&x18=0&x19=0&x20=0&x21=1&x22=0&x23=TRUE&x24=492786776143062000&x25=Facebook&x26="`
 
