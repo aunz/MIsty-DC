@@ -42,9 +42,9 @@ This will create an express server listening on port 3000
 
 
 ### Flask server
-under the main folder, run
+under the python folder, run
 
-`python3 python\server.py`
+`python3 server.py`
 
 This will create a Flask server listening on port 5555
 
