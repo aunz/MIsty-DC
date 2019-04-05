@@ -1,31 +1,31 @@
-FROM node:11-alpine
+FROM continuumio/miniconda3
 
-RUN apk add --update  python3-dev build-base openblas-dev libexecinfo-dev
+RUN pip install numpy==1.16.* 
+RUN pip install scipy==1.2.*
+RUN pip install pandas==0.24.*
+RUN pip install scikit-learn==0.20.*
+RUN pip install xgboost==0.82
+RUN pip install flask==1.0.*
 
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
+RUN apt-get install -y nodejs
 
-#RUN pip3 install pandas==0.24.*
-#RUN pip3 install numpy== 
-#RUN pip3 install scipy==
-#RUN pip3 install scikit-learn==0.20.*
-RUN pip3 install xgboost==0.82
-#RUN pip3 install flask==1.0.*
-
-#RUN mkdir -p /app/python
-#RUN mkdir -p /app/node
-
-
-#COPY node/package.json /app/node
-#WORKDIR /app/node
-#RUN npm install
+RUN mkdir -p /app/python
+RUN mkdir -p /app/node
 
 
-#COPY python/. /app/python
-#COPY node/index.js /app/node
+COPY node/package.json /app/node
+WORKDIR /app/node
+RUN npm install
 
-#WORKDIR /app
 
-#EXPOSE 3000
+COPY python/. /app/python
+COPY node/index.js /app/node
 
-#COPY entry-point.sh /app
+WORKDIR /app
 
-#CMD ["./entry-point.sh"]
+EXPOSE 3000
+
+COPY entry-point.sh /app
+
+CMD ["./entry-point.sh"]
