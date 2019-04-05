@@ -27,7 +27,8 @@ How to run? Docker or manual installtion
 
 - Install [nodejs](https://nodejs.org/), v11.13.0
 - Install [python3](https://www.python.org/downloads/), minimum v3.6
-- Install [scikit-learn](https://scikit-learn.org/stable/install.html), v0.20. This installation will also install its dependency such as numpy and pandas
+- Install [pandas](http://pandas.pydata.org/pandas-docs/stable/install.html), v0.24
+- Install [scikit-learn](https://scikit-learn.org/stable/install.html), v0.20. This installation will also install its dependency such as numpy
 - Install [xgboost](https://xgboost.readthedocs.io/en/latest/build.html), v0.82
 - Install [Flask](http://flask.pocoo.org/docs/1.0/installation/) v1.0 
 
