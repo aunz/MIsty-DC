@@ -17,7 +17,7 @@ Predict the binary target *y* (0 or 1) given features *X*
 - The model is deployed using Flask
 - Nodejs is used in front of Flask to validate inputs
 
-How to run? Docker or manual installtion
+How to run? Docker or manual installation.
 
 # Docker
 
